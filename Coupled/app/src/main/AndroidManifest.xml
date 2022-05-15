@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sit708.coupledApp">
+
+    <!--Permission to use Internet-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/heart"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme.NoActionBar">
+        <activity
+                android:name="com.sit708.coupledApp.activities.SignupActivity"
+                android:screenOrientation="fullSensor"
+                android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <!--Chatbot Activity Library-->
+        <activity
+                android:name="com.tyagiabhinav.dialogflowchatlibrary.ChatbotActivity"
+                android:launchMode="singleTask"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            <activity
+                    android:name="com.sit708.coupledApp.activities.LoginActivity"
+                    android:screenOrientation="fullSensor"
+                    android:windowSoftInputMode="adjustResize">
+            </activity>
+            <activity
+                    android:name="com.sit708.coupledApp.activities.StartupActivity"
+                    android:screenOrientation="fullSensor"
+                    android:windowSoftInputMode="adjustResize"
+                    android:exported="true">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN"/>
+                        <category android:name="android.intent.category.LAUNCHER"/>
+                </intent-filter>
+            </activity>
+        <activity
+                android:name="com.sit708.coupledApp.activities.MainActivity"
+                android:screenOrientation="fullSensor"
+                android:windowSoftInputMode="adjustResize"/>
+    </application>
+</manifest>

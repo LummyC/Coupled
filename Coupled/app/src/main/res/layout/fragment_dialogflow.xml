@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:clipToPadding="false"
+            android:focusableInTouchMode="true"
+            tools:context=".MainActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/messagesView"
+                android:layout_weight="2"
+                android:divider="#fff"
+                android:layout_height="0dp"
+                />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffff"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="20dp">
+
+            <EditText
+                    android:id="@+id/inputText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="textCapSentences"
+                    android:hint="@string/hint_message"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:autofillHints="" />
+
+            <ImageButton
+                    android:id="@+id/btSend"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/heart"
+                    android:contentDescription="@string/send_button_text" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
